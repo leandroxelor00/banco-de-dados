@@ -1,0 +1,1 @@
+CREATE USER 'leonardo'@'%' IDENTIFIED BY '123456';
