@@ -78,7 +78,7 @@ CREATE PROCEDURE BuscarSolicitacao(
 )
 BEGIN
     SELECT *
-    FROM solicitacao
+    FROM solicitacoes
     WHERE id = p_id;
 END//
 
