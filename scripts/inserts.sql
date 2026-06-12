@@ -192,23 +192,6 @@ INSERT INTO solicitacoes (idPassageiro, idFornecedor, idTarifa, dataSolicitacao)
 
 select * from solicitacoes
 
-<<<<<<< HEAD
 alter TABLE solicitacoes add column status BOOLEAN;
 
-=======
->>>>>>> main
-start TRANSACTION;
 
-update solicitacoes set status=True where id=1;
-
-commit;
-
-ROLLBACK;
-
-start TRANSACTION;
-
-update solicitacoes set status=FALSE where id=2;
-
-commit;
-
-ROLLBACK;
