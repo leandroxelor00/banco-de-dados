@@ -70,7 +70,7 @@ CREATE TABLE tarifa(
 
 );
  
-CREATE TABLE solicitacao(
+CREATE TABLE solicitacoes(
 
 	ID int PRIMARY key auto_increment,
 
