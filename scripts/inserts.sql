@@ -178,7 +178,7 @@ VALUES
 
 select * from tarifa
 
-INSERT INTO solicitacao (idPassageiro, idFornecedor, idTarifa, dataSolicitacao) VALUES
+INSERT INTO solicitacoes (idPassageiro, idFornecedor, idTarifa, dataSolicitacao) VALUES
 (1, 1, 1, '2024-12-20'),
 (5, 2, 2, '2025-01-15'),
 (9, 3, 3, '2025-01-05'),
@@ -190,4 +190,22 @@ INSERT INTO solicitacao (idPassageiro, idFornecedor, idTarifa, dataSolicitacao) 
 (45, 2, 9, '2025-01-20'),
 (58, 3, 10, '2025-03-25');
 
-select * from solicitacao
+select * from solicitacoes
+
+alter TABLE solicitacoes add column status BOOLEAN;
+
+start TRANSACTION;
+
+update solicitacoes set status=True where id=1;
+
+commit;
+
+ROLLBACK;
+
+start TRANSACTION;
+
+update solicitacoes set status=FALSE where id=2;
+
+commit;
+
+ROLLBACK;
