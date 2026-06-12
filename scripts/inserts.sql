@@ -191,3 +191,21 @@ INSERT INTO solicitacao (idPassageiro, idFornecedor, idTarifa, dataSolicitacao) 
 (58, 3, 10, '2025-03-25');
 
 select * from solicitacao
+
+alter TABLE solicitacao add column status BOOLEAN;
+
+start TRANSACTION;
+
+update solicitacao set status=True where id=1;
+
+commit;
+
+ROLLBACK;
+
+start TRANSACTION;
+
+update solicitacao set status=FALSE where id=2;
+
+commit;
+
+ROLLBACK;
